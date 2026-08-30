@@ -145,7 +145,7 @@ get_header();
                     <div class="netbona-app-card__top">
 
                         <div class="netbona-app-card__icon">
-                            N
+                            S
                         </div>
 
                         <span class="netbona-pill">
@@ -157,17 +157,17 @@ get_header();
                     <div class="netbona-app-card__body">
 
                         <span class="netbona-app-card__kicker">
-                            App 01
+                            StoreBoost
                         </span>
 
                         <h3>
-                            Our first Shopify app
+                            StoreBoost — Conversion Elements
                         </h3>
 
                         <p>
-                            Our first product is being prepared for launch.
-                            It follows the Netbona principle:
-                            solve one real workflow problem exceptionally well.
+                            Conversion-focused storefront elements for Shopify merchants,
+                            designed to help stores present offers, information and purchase
+                            incentives more clearly.
                         </p>
 
                     </div>
