@@ -1,0 +1,295 @@
+
+/* StoreBoost product page */
+.storeboost-page {
+    background: var(--netbona-bg-deep);
+}
+
+.storeboost-hero {
+    padding: 104px 0 82px;
+    background:
+        radial-gradient(circle at 78% 18%, rgba(86, 62, 255, .22), transparent 30%),
+        radial-gradient(circle at 92% 58%, rgba(38, 212, 196, .14), transparent 32%),
+        linear-gradient(135deg, #07111f 0%, #0a1727 54%, #0d2632 100%);
+}
+
+.storeboost-hero__grid {
+    display: grid;
+    grid-template-columns: minmax(0, .78fr) minmax(520px, 1.22fr);
+    gap: 58px;
+    align-items: center;
+}
+
+.storeboost-brandline {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.storeboost-brandmark {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #6d4aff, #3c25dd);
+    box-shadow: 0 12px 34px rgba(80, 54, 245, .24);
+}
+
+.storeboost-status {
+    padding: 7px 10px;
+    border: 1px solid rgba(38, 212, 196, .18);
+    border-radius: 999px;
+    background: rgba(38, 212, 196, .08);
+    color: var(--netbona-accent);
+    font-size: 12px;
+}
+
+.storeboost-hero h1 {
+    margin: 0;
+    max-width: 680px;
+    font-size: clamp(48px, 5.2vw, 78px);
+    line-height: .98;
+    letter-spacing: -.05em;
+}
+
+.storeboost-hero__copy > p {
+    max-width: 680px;
+    margin: 26px 0 0;
+    color: var(--netbona-text-muted);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.storeboost-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.storeboost-feature-pills,
+.storeboost-mini-features,
+.storeboost-control__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.storeboost-feature-pills {
+    margin-top: 28px;
+}
+
+.storeboost-feature-pills span,
+.storeboost-mini-features span,
+.storeboost-control__items span {
+    padding: 8px 11px;
+    border: 1px solid var(--netbona-border);
+    border-radius: 999px;
+    background: rgba(255,255,255,.035);
+    color: var(--netbona-text-muted);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.storeboost-hero__visual img,
+.storeboost-shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.storeboost-hero__visual {
+    padding: 12px;
+    border: 1px solid var(--netbona-border);
+    border-radius: 26px;
+    background: rgba(255,255,255,.045);
+    box-shadow: var(--netbona-shadow);
+}
+
+.storeboost-hero__visual img {
+    border-radius: 18px;
+}
+
+.storeboost-intro {
+    padding: 104px 0 42px;
+}
+
+.storeboost-intro__grid {
+    display: grid;
+    grid-template-columns: 1fr .78fr;
+    gap: 72px;
+    align-items: end;
+}
+
+.storeboost-intro h2,
+.storeboost-feature h2,
+.storeboost-control h2,
+.storeboost-cta h2 {
+    margin: 0;
+    font-size: clamp(38px, 4.5vw, 62px);
+    line-height: 1.02;
+    letter-spacing: -.045em;
+}
+
+.storeboost-intro p,
+.storeboost-feature__copy > p,
+.storeboost-control__grid > p,
+.storeboost-cta p {
+    margin: 0;
+    color: var(--netbona-text-muted);
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.storeboost-feature {
+    padding: 92px 0;
+}
+
+.storeboost-feature--alt {
+    background: #08131f;
+    border-top: 1px solid var(--netbona-border);
+    border-bottom: 1px solid var(--netbona-border);
+}
+
+.storeboost-feature__grid {
+    display: grid;
+    grid-template-columns: minmax(360px, .72fr) minmax(0, 1.28fr);
+    gap: 58px;
+    align-items: center;
+}
+
+.storeboost-feature__grid--reverse .storeboost-feature__copy {
+    order: 2;
+}
+
+.storeboost-feature__grid--reverse .storeboost-shot {
+    order: 1;
+}
+
+.storeboost-number {
+    display: block;
+    margin-bottom: 16px;
+    color: var(--netbona-text-soft);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .14em;
+}
+
+.storeboost-feature__copy > p {
+    margin-top: 24px;
+}
+
+.storeboost-mini-features {
+    margin-top: 24px;
+}
+
+.storeboost-shot {
+    margin: 0;
+    padding: 10px;
+    border: 1px solid var(--netbona-border);
+    border-radius: 22px;
+    background: rgba(255,255,255,.045);
+    box-shadow: 0 24px 70px rgba(0,0,0,.2);
+    overflow: hidden;
+}
+
+.storeboost-shot img {
+    border-radius: 15px;
+}
+
+.storeboost-shot--overview {
+    max-height: 540px;
+}
+
+.storeboost-shot--overview img {
+    transform: scale(1.03);
+}
+
+.storeboost-control {
+    padding: 104px 0;
+}
+
+.storeboost-control__card {
+    padding: 42px;
+    border: 1px solid var(--netbona-border);
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at 100% 0%, rgba(38,212,196,.14), transparent 34%),
+        linear-gradient(135deg, rgba(255,255,255,.07), rgba(255,255,255,.025));
+}
+
+.storeboost-control__grid {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 72px;
+    align-items: end;
+}
+
+.storeboost-control__items {
+    margin-top: 34px;
+}
+
+.storeboost-cta {
+    padding: 86px 0;
+    background: linear-gradient(120deg, #0b5961, #0b1b31);
+    border-top: 1px solid rgba(255,255,255,.1);
+}
+
+.storeboost-cta__inner {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 44px;
+}
+
+.storeboost-cta p {
+    margin-top: 16px;
+}
+
+@media (max-width: 980px) {
+    .storeboost-hero__grid,
+    .storeboost-intro__grid,
+    .storeboost-feature__grid,
+    .storeboost-control__grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .storeboost-feature__grid--reverse .storeboost-feature__copy,
+    .storeboost-feature__grid--reverse .storeboost-shot {
+        order: initial;
+    }
+
+    .storeboost-hero__visual {
+        max-width: 760px;
+    }
+}
+
+@media (max-width: 680px) {
+    .storeboost-hero {
+        padding: 72px 0 58px;
+    }
+
+    .storeboost-intro,
+    .storeboost-feature,
+    .storeboost-control {
+        padding: 72px 0;
+    }
+
+    .storeboost-control__card {
+        padding: 26px;
+        border-radius: 22px;
+    }
+
+    .storeboost-cta__inner {
+        display: block;
+    }
+
+    .storeboost-cta .netbona-button {
+        margin-top: 26px;
+    }
+}

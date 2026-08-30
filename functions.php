@@ -34,6 +34,20 @@ function netbona_enqueue_assets() {
 
 add_action( 'wp_enqueue_scripts', 'netbona_enqueue_assets', 20 );
 
+function netbona_enqueue_storeboost_assets() {
+    if ( is_page( 'storeboost' ) ) {
+        wp_enqueue_style(
+            'netbona-storeboost',
+            get_stylesheet_directory_uri() . '/assets/css/storeboost.css',
+            array( 'netbona-main' ),
+            wp_get_theme()->get( 'Version' )
+        );
+    }
+}
+
+add_action( 'wp_enqueue_scripts', 'netbona_enqueue_storeboost_assets', 30 );
+
+
 
 /**
  * Normalize the Apps navigation label.

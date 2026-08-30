@@ -176,7 +176,9 @@ get_header();
 
                     <div class="netbona-app-card__footer">
                         <span>Shopify app</span>
-                        <span>↗</span>
+                        <a href="<?php echo esc_url( home_url( '/storeboost/' ) ); ?>" aria-label="View StoreBoost">
+                            View StoreBoost →
+                        </a>
                     </div>
 
                 </article>
