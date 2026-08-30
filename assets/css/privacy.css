@@ -1,0 +1,122 @@
+/* Netbona Privacy Policy */
+
+body.page-privacy {
+    background: #07111f;
+    color: #dfe7f1;
+}
+
+body.page-privacy .site-content,
+body.page-privacy .entry-content,
+body.page-privacy .ast-container,
+body.page-privacy #primary,
+body.page-privacy .site-main {
+    background: #07111f;
+}
+
+body.page-privacy .entry-header {
+    display: none;
+}
+
+body.page-privacy .entry-content {
+    margin: 0;
+    padding: 0;
+}
+
+body.page-privacy .entry-content > * {
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body.page-privacy .entry-content {
+    padding: 92px 24px 110px;
+}
+
+body.page-privacy .entry-content h1 {
+    margin: 0 0 12px;
+    color: #f7fbff;
+    font-size: clamp(44px, 5vw, 72px);
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+body.page-privacy .entry-content h2 {
+    margin: 64px 0 18px;
+    color: #f7fbff;
+    font-size: clamp(28px, 3vw, 38px);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+body.page-privacy .entry-content p,
+body.page-privacy .entry-content li {
+    color: #a8b5c7;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+body.page-privacy .entry-content p {
+    margin: 0 0 20px;
+}
+
+body.page-privacy .entry-content ul {
+    margin: 18px auto 24px;
+    padding-left: 24px;
+}
+
+body.page-privacy .entry-content li {
+    margin-bottom: 10px;
+}
+
+body.page-privacy .entry-content strong {
+    color: #f7fbff;
+}
+
+body.page-privacy .entry-content a {
+    color: #26d4c4;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+body.page-privacy .entry-content a:hover {
+    color: #ffffff;
+}
+
+body.page-privacy .entry-content > p:first-of-type {
+    color: #26d4c4;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+body.page-privacy .entry-content h2 {
+    padding-top: 28px;
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+
+body.page-privacy .entry-content h2:first-of-type {
+    margin-top: 52px;
+}
+
+body.page-privacy .entry-content blockquote,
+body.page-privacy .entry-content .wp-block-group {
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: 18px;
+    background: rgba(255,255,255,.035);
+}
+
+@media (max-width: 680px) {
+    body.page-privacy .entry-content {
+        padding: 68px 20px 84px;
+    }
+
+    body.page-privacy .entry-content h2 {
+        margin-top: 48px;
+    }
+
+    body.page-privacy .entry-content p,
+    body.page-privacy .entry-content li {
+        font-size: 16px;
+    }
+}

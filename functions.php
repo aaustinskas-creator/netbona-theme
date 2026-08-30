@@ -63,3 +63,17 @@ function netbona_normalize_menu_labels( $items ) {
 }
 
 add_filter( 'wp_nav_menu_objects', 'netbona_normalize_menu_labels' );
+
+
+function netbona_enqueue_privacy_assets() {
+    if ( is_page( 'privacy' ) ) {
+        wp_enqueue_style(
+            'netbona-privacy',
+            get_stylesheet_directory_uri() . '/assets/css/privacy.css',
+            array( 'netbona-main' ),
+            wp_get_theme()->get( 'Version' )
+        );
+    }
+}
+
+add_action( 'wp_enqueue_scripts', 'netbona_enqueue_privacy_assets', 30 );
