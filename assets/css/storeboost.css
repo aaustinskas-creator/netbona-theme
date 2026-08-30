@@ -315,3 +315,10 @@
 .storeboost-page .netbona-eyebrow {
     color: #27d4c5;
 }
+
+/* Match StoreBoost header logo to the white homepage logo */
+body.page-storeboost .site-header .custom-logo,
+body.page-storeboost .site-header .site-logo-img img,
+body.page-storeboost .site-header .ast-site-identity img {
+    filter: brightness(0) invert(1);
+}
