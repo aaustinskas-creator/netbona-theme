@@ -163,8 +163,14 @@ get_header();
                         <p>
                             Conversion elements for the moments that matter —
                             from product discovery to cart and checkout trust.
-                            Benefits · Badges · Cart upsells · Payment & trust
                         </p>
+
+                        <div class="netbona-app-features">
+                            <span>Product benefits</span>
+                            <span>Badges</span>
+                            <span>Cart & upsell</span>
+                            <span>Payments & trust</span>
+                        </div>
 
                     </div>
 

@@ -33,3 +33,19 @@ function netbona_enqueue_assets() {
 }
 
 add_action( 'wp_enqueue_scripts', 'netbona_enqueue_assets', 20 );
+
+
+/**
+ * Normalize the Apps navigation label.
+ */
+function netbona_normalize_menu_labels( $items ) {
+    foreach ( $items as $item ) {
+        if ( trim( $item->title ) === 'APP' ) {
+            $item->title = 'Apps';
+        }
+    }
+
+    return $items;
+}
+
+add_filter( 'wp_nav_menu_objects', 'netbona_normalize_menu_labels' );
