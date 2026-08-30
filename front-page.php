@@ -54,39 +54,35 @@ get_header();
 
                     <div class="netbona-product-window__top">
                         <div class="netbona-product-window__brand">
-                            <span class="netbona-product-window__mark">N</span>
-                            <span>Netbona Apps</span>
+                            <span class="netbona-product-window__mark">S</span>
+                            <span>StoreBoost</span>
                         </div>
 
                         <span class="netbona-product-window__status">
-                            Live
+                            Conversion Elements
                         </span>
                     </div>
 
                     <div class="netbona-product-window__body">
 
                         <div class="netbona-product-stat netbona-product-stat--wide">
-                            <span>Merchant workflow</span>
-                            <strong>Automated</strong>
+                            <span>Product page</span>
+                            <strong>Benefits & trust</strong>
                         </div>
 
                         <div class="netbona-product-stat">
-                            <span>Manual steps</span>
-                            <strong>−68%</strong>
+                            <span>Collection page</span>
+                            <strong>Product badges</strong>
                         </div>
 
                         <div class="netbona-product-stat">
-                            <span>Setup</span>
-                            <strong>Minutes</strong>
+                            <span>Cart & upsell</span>
+                            <strong>Promotions</strong>
                         </div>
 
-                        <div class="netbona-product-chart">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                        <div class="netbona-product-stat">
+                            <span>Payments & trust</span>
+                            <strong>Payment icons</strong>
                         </div>
 
                     </div>
@@ -165,9 +161,9 @@ get_header();
                         </h3>
 
                         <p>
-                            Conversion-focused storefront elements for Shopify merchants,
-                            designed to help stores present offers, information and purchase
-                            incentives more clearly.
+                            Add conversion-focused elements across your Shopify store —
+                            product benefits, collection badges, cart promotions,
+                            payment icons and trust messages.
                         </p>
 
                     </div>
