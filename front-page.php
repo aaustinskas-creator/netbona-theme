@@ -24,8 +24,8 @@ get_header();
                 </h1>
 
                 <p class="netbona-hero__lead">
-                    We build focused Shopify apps for merchants who want cleaner workflows,
-                    fewer manual tasks and more time to grow.
+                    We build focused Shopify apps that help merchants improve storefront
+                    conversion, strengthen customer trust and sell more effectively.
                 </p>
 
                 <div class="netbona-hero__actions">
@@ -161,9 +161,9 @@ get_header();
                         </h3>
 
                         <p>
-                            Add conversion-focused elements across your Shopify store —
-                            product benefits, collection badges, cart promotions,
-                            payment icons and trust messages.
+                            Conversion elements for the moments that matter —
+                            from product discovery to cart and checkout trust.
+                            Benefits · Badges · Cart upsells · Payment & trust
                         </p>
 
                     </div>
