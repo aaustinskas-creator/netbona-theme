@@ -322,3 +322,11 @@ body.page-storeboost .site-header .site-logo-img img,
 body.page-storeboost .site-header .ast-site-identity img {
     filter: brightness(0) invert(1);
 }
+
+/* Force StoreBoost header logo to white */
+body.page-storeboost header img,
+body.page-storeboost .site-header img,
+body.page-storeboost .ast-primary-header-bar img,
+body.page-storeboost .site-branding img {
+    filter: brightness(0) invert(1) !important;
+}
