@@ -293,3 +293,25 @@
         margin-top: 26px;
     }
 }
+
+/* StoreBoost heading contrast */
+.storeboost-page h1,
+.storeboost-page h2,
+.storeboost-page h3 {
+    color: #f5f8fc;
+}
+
+.storeboost-hero h1 {
+    color: #f5f8fc;
+}
+
+.storeboost-feature h2,
+.storeboost-intro h2,
+.storeboost-control h2,
+.storeboost-cta h2 {
+    color: #f5f8fc;
+}
+
+.storeboost-page .netbona-eyebrow {
+    color: #27d4c5;
+}
