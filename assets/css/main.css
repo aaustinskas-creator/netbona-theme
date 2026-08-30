@@ -1,83 +1,165 @@
 :root {
     --netbona-bg: #07111f;
-    --netbona-bg-soft: #0d1b2a;
-    --netbona-surface: rgba(255, 255, 255, 0.05);
+    --netbona-bg-deep: #040b14;
+    --netbona-bg-soft: #0b1725;
+    --netbona-panel: rgba(255, 255, 255, 0.045);
+    --netbona-panel-strong: rgba(255, 255, 255, 0.075);
     --netbona-border: rgba(255, 255, 255, 0.10);
-    --netbona-text: #f7f9fc;
-    --netbona-text-muted: #a8b3c3;
-    --netbona-accent: #24d3c1;
-    --netbona-accent-strong: #14b8a6;
-    --netbona-container: 1180px;
+    --netbona-border-strong: rgba(255, 255, 255, 0.16);
+    --netbona-text: #f7fbff;
+    --netbona-text-muted: #a8b5c7;
+    --netbona-text-soft: #77869a;
+    --netbona-accent: #26d4c4;
+    --netbona-accent-strong: #15b8aa;
+    --netbona-accent-soft: rgba(38, 212, 196, 0.14);
+    --netbona-container: 1240px;
+    --netbona-radius: 24px;
+    --netbona-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
+    margin: 0;
     background: var(--netbona-bg);
     color: var(--netbona-text);
 }
 
+body,
+button,
+input,
+textarea,
+select {
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.site,
+.site-content,
+.ast-container,
+#page,
+#content,
+#primary,
+.site-main {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ast-container {
+    max-width: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.site-content .ast-container {
+    display: block;
+}
+
+#primary {
+    margin: 0 !important;
+}
+
+.entry-content {
+    margin: 0;
+}
+
 .netbona-main {
+    width: 100%;
     overflow: hidden;
+    background: var(--netbona-bg);
 }
 
 .netbona-container {
-    width: min(calc(100% - 40px), var(--netbona-container));
+    width: min(calc(100% - 48px), var(--netbona-container));
     margin: 0 auto;
 }
 
-.netbona-hero {
-    padding: 120px 0 100px;
-    background:
-        radial-gradient(circle at 80% 20%, rgba(36, 211, 193, 0.18), transparent 34%),
-        linear-gradient(135deg, #07111f 0%, #0a2640 52%, #0b7c78 120%);
-}
-
-.netbona-hero__content {
-    max-width: 820px;
-}
-
 .netbona-eyebrow {
-    display: inline-block;
-    margin-bottom: 22px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
     color: var(--netbona-accent);
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
 }
 
-.netbona-hero h1,
-.netbona-apps h2,
-.netbona-about h2,
-.netbona-contact h2 {
-    margin: 0;
-    color: var(--netbona-text);
-    font-weight: 700;
-    letter-spacing: -0.04em;
+.netbona-eyebrow::before {
+    content: "";
+    width: 26px;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.7;
+}
+
+.netbona-hero {
+    position: relative;
+    padding: 112px 0 92px;
+    background:
+        radial-gradient(circle at 75% 20%, rgba(38, 212, 196, 0.20), transparent 28%),
+        radial-gradient(circle at 88% 58%, rgba(28, 99, 132, 0.22), transparent 30%),
+        linear-gradient(135deg, #07111f 0%, #0a1c2d 48%, #0b3f4b 100%);
+}
+
+.netbona-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,.65), transparent);
+}
+
+.netbona-hero__grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(420px, .95fr);
+    gap: 72px;
+    align-items: center;
+}
+
+.netbona-hero__content {
+    max-width: 760px;
 }
 
 .netbona-hero h1 {
-    max-width: 820px;
-    font-size: clamp(52px, 7vw, 88px);
-    line-height: 0.98;
+    margin: 0;
+    max-width: 800px;
+    color: var(--netbona-text);
+    font-size: clamp(58px, 6.2vw, 92px);
+    line-height: 0.96;
+    letter-spacing: -0.055em;
+    font-weight: 760;
 }
 
 .netbona-hero h1 span {
+    display: block;
+    margin-top: 8px;
     color: var(--netbona-accent);
 }
 
-.netbona-hero p {
-    max-width: 680px;
-    margin: 28px 0 0;
+.netbona-hero__lead {
+    max-width: 700px;
+    margin: 30px 0 0;
     color: var(--netbona-text-muted);
     font-size: 20px;
-    line-height: 1.65;
+    line-height: 1.7;
 }
 
 .netbona-hero__actions {
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
-    margin-top: 36px;
+    margin-top: 34px;
 }
 
 .netbona-button {
@@ -86,11 +168,16 @@ body {
     justify-content: center;
     min-height: 52px;
     padding: 0 24px;
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: 700;
+    border-radius: 14px;
+    border: 1px solid transparent;
+    font-size: 15px;
+    font-weight: 800;
     text-decoration: none;
-    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        background .2s ease,
+        color .2s ease;
 }
 
 .netbona-button:hover {
@@ -99,140 +186,645 @@ body {
 
 .netbona-button--primary {
     background: var(--netbona-accent);
-    color: #041311;
+    color: #031713;
 }
 
 .netbona-button--primary:hover {
     background: var(--netbona-accent-strong);
-    color: #041311;
+    color: #031713;
 }
 
 .netbona-button--secondary {
-    border: 1px solid var(--netbona-border);
-    background: rgba(255, 255, 255, 0.04);
+    border-color: var(--netbona-border-strong);
+    background: rgba(255,255,255,.04);
     color: var(--netbona-text);
 }
 
-.netbona-apps,
-.netbona-about,
-.netbona-contact {
-    padding: 100px 0;
+.netbona-button--secondary:hover {
+    border-color: rgba(255,255,255,.28);
+    background: rgba(255,255,255,.07);
+    color: var(--netbona-text);
+}
+
+.netbona-button--light {
+    background: var(--netbona-text);
+    color: #07111f;
+}
+
+.netbona-button--light:hover {
+    background: #e9f0f7;
+    color: #07111f;
+}
+
+.netbona-hero__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 22px;
+    margin-top: 34px;
+    color: var(--netbona-text-soft);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.netbona-hero__meta span {
+    position: relative;
+    padding-left: 14px;
+}
+
+.netbona-hero__meta span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 999px;
+    background: var(--netbona-accent);
+    transform: translateY(-50%);
+}
+
+.netbona-hero__visual {
+    position: relative;
+    min-height: 500px;
+    display: grid;
+    place-items: center;
+}
+
+.netbona-orbit {
+    position: absolute;
+    border: 1px solid rgba(38, 212, 196, 0.22);
+    border-radius: 50%;
+}
+
+.netbona-orbit--one {
+    width: 420px;
+    height: 420px;
+}
+
+.netbona-orbit--two {
+    width: 540px;
+    height: 540px;
+    opacity: .45;
+}
+
+.netbona-product-window {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 470px);
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 26px;
+    background:
+        linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.035)),
+        rgba(4, 11, 20, .72);
+    backdrop-filter: blur(18px);
+    box-shadow: var(--netbona-shadow);
+    overflow: hidden;
+    transform: rotate(-2deg);
+}
+
+.netbona-product-window__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--netbona-border);
+}
+
+.netbona-product-window__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--netbona-text);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.netbona-product-window__mark {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background: var(--netbona-accent);
+    color: #031713;
+    font-weight: 900;
+}
+
+.netbona-product-window__status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: rgba(38, 212, 196, 0.12);
+    color: var(--netbona-accent);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.netbona-product-window__status::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: var(--netbona-accent);
+}
+
+.netbona-product-window__body {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 14px;
+    padding: 20px;
+}
+
+.netbona-product-stat {
+    min-height: 112px;
+    padding: 18px;
+    border: 1px solid var(--netbona-border);
+    border-radius: 18px;
+    background: rgba(255,255,255,.04);
+}
+
+.netbona-product-stat--wide {
+    grid-column: 1 / -1;
+}
+
+.netbona-product-stat span {
+    display: block;
+    color: var(--netbona-text-soft);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.netbona-product-stat strong {
+    display: block;
+    margin-top: 20px;
+    color: var(--netbona-text);
+    font-size: 28px;
+    letter-spacing: -0.04em;
+}
+
+.netbona-product-chart {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: end;
+    gap: 10px;
+    height: 120px;
+    padding: 18px;
+    border: 1px solid var(--netbona-border);
+    border-radius: 18px;
+    background:
+        linear-gradient(180deg, rgba(38,212,196,.06), rgba(255,255,255,.025));
+}
+
+.netbona-product-chart span {
+    flex: 1;
+    border-radius: 8px 8px 3px 3px;
+    background: linear-gradient(180deg, var(--netbona-accent), rgba(38,212,196,.28));
+}
+
+.netbona-product-chart span:nth-child(1) { height: 28%; }
+.netbona-product-chart span:nth-child(2) { height: 42%; }
+.netbona-product-chart span:nth-child(3) { height: 38%; }
+.netbona-product-chart span:nth-child(4) { height: 62%; }
+.netbona-product-chart span:nth-child(5) { height: 72%; }
+.netbona-product-chart span:nth-child(6) { height: 90%; }
+
+.netbona-strip {
+    border-top: 1px solid var(--netbona-border);
+    border-bottom: 1px solid var(--netbona-border);
+    background: #08131f;
+}
+
+.netbona-strip__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    padding: 26px 0;
+}
+
+.netbona-strip p {
+    margin: 0;
+    color: var(--netbona-text-muted);
+    font-size: 15px;
+}
+
+.netbona-strip a {
+    flex: 0 0 auto;
+    color: var(--netbona-text);
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.netbona-strip a:hover {
+    color: var(--netbona-accent);
+}
+
+.netbona-section {
+    padding: 118px 0;
 }
 
 .netbona-apps {
-    background: #0a1422;
+    background: var(--netbona-bg-deep);
 }
 
-.netbona-apps h2,
+.netbona-section__header {
+    display: grid;
+    grid-template-columns: minmax(0,1.2fr) minmax(340px,.8fr);
+    gap: 70px;
+    align-items: end;
+}
+
+.netbona-section__header h2,
 .netbona-about h2,
+.netbona-foundation h2,
 .netbona-contact h2 {
-    max-width: 760px;
-    font-size: clamp(38px, 5vw, 58px);
-    line-height: 1.06;
+    margin: 0;
+    color: var(--netbona-text);
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.03;
+    letter-spacing: -0.05em;
+    font-weight: 760;
 }
 
-.netbona-apps > .netbona-container > p,
-.netbona-about p,
+.netbona-section__header > p,
+.netbona-about__copy > p,
+.netbona-foundation__grid > p,
 .netbona-contact p {
-    max-width: 720px;
-    margin-top: 22px;
+    margin: 0;
     color: var(--netbona-text-muted);
     font-size: 18px;
-    line-height: 1.7;
+    line-height: 1.72;
 }
 
 .netbona-app-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: 1.2fr .8fr;
     gap: 22px;
-    margin-top: 48px;
+    margin-top: 58px;
 }
 
 .netbona-app-card {
     display: flex;
-    gap: 20px;
-    min-height: 220px;
-    padding: 28px;
+    flex-direction: column;
+    min-height: 430px;
+    padding: 30px;
     border: 1px solid var(--netbona-border);
-    border-radius: 20px;
-    background: var(--netbona-surface);
-    backdrop-filter: blur(10px);
+    border-radius: var(--netbona-radius);
+    background: var(--netbona-panel);
+}
+
+.netbona-app-card--featured {
+    background:
+        radial-gradient(circle at 100% 0%, rgba(38,212,196,.16), transparent 38%),
+        linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.035));
+}
+
+.netbona-app-card--ghost {
+    background:
+        linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.018));
+}
+
+.netbona-app-card__top,
+.netbona-app-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .netbona-app-card__icon {
     display: grid;
     place-items: center;
-    flex: 0 0 54px;
-    width: 54px;
-    height: 54px;
-    border-radius: 14px;
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
     background: var(--netbona-accent);
-    color: #041311;
-    font-size: 22px;
+    color: #031713;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.netbona-app-card__icon--muted {
+    background: rgba(255,255,255,.08);
+    color: var(--netbona-text-muted);
+    font-size: 15px;
+}
+
+.netbona-pill {
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: var(--netbona-accent-soft);
+    color: var(--netbona-accent);
+    font-size: 12px;
     font-weight: 800;
 }
 
-.netbona-app-card__status {
+.netbona-app-card__body {
+    margin-top: auto;
+    padding-top: 58px;
+}
+
+.netbona-app-card__kicker {
+    display: block;
+    margin-bottom: 12px;
     color: var(--netbona-accent);
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .12em;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
 }
 
 .netbona-app-card h3 {
-    margin: 8px 0 10px;
+    max-width: 500px;
+    margin: 0;
     color: var(--netbona-text);
-    font-size: 24px;
+    font-size: clamp(30px, 3vw, 44px);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
 }
 
 .netbona-app-card p {
-    margin: 0;
+    max-width: 620px;
+    margin: 18px 0 0;
     color: var(--netbona-text-muted);
-    line-height: 1.65;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.netbona-app-card__footer {
+    margin-top: 42px;
+    padding-top: 18px;
+    border-top: 1px solid var(--netbona-border);
+    color: var(--netbona-text-soft);
+    font-size: 13px;
+    font-weight: 700;
 }
 
 .netbona-about {
     background:
-        linear-gradient(180deg, #07111f 0%, #0a1422 100%);
-}
-
-.netbona-contact {
-    background:
-        radial-gradient(circle at 20% 50%, rgba(36, 211, 193, 0.15), transparent 30%),
+        radial-gradient(circle at 15% 10%, rgba(38,212,196,.08), transparent 28%),
         #08131f;
 }
 
-@media (max-width: 900px) {
+.netbona-about__grid {
+    display: grid;
+    grid-template-columns: minmax(0,.9fr) minmax(420px,1.1fr);
+    gap: 92px;
+}
+
+.netbona-about__copy {
+    position: sticky;
+    top: 120px;
+    align-self: start;
+}
+
+.netbona-about__copy > p {
+    margin-top: 24px;
+}
+
+.netbona-principles {
+    border-top: 1px solid var(--netbona-border);
+}
+
+.netbona-principles article {
+    display: grid;
+    grid-template-columns: 58px minmax(0,.8fr) minmax(0,1.2fr);
+    gap: 24px;
+    align-items: start;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--netbona-border);
+}
+
+.netbona-principles article > span {
+    color: var(--netbona-accent);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.netbona-principles h3 {
+    margin: 0;
+    color: var(--netbona-text);
+    font-size: 22px;
+    letter-spacing: -0.03em;
+}
+
+.netbona-principles p {
+    margin: 0;
+    color: var(--netbona-text-muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.netbona-foundation {
+    background: var(--netbona-bg-deep);
+}
+
+.netbona-foundation__card {
+    padding: 44px;
+    border: 1px solid var(--netbona-border);
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at 100% 0%, rgba(38,212,196,.15), transparent 34%),
+        linear-gradient(135deg, rgba(255,255,255,.07), rgba(255,255,255,.025));
+}
+
+.netbona-foundation__grid {
+    display: grid;
+    grid-template-columns: minmax(0,1.2fr) minmax(340px,.8fr);
+    gap: 72px;
+    align-items: end;
+}
+
+.netbona-contact {
+    padding: 96px 0;
+    background:
+        linear-gradient(135deg, #0b4e55 0%, #0b293b 55%, #07111f 100%);
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.netbona-contact__inner {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 56px;
+}
+
+.netbona-contact p {
+    max-width: 700px;
+    margin-top: 22px;
+}
+
+.site-header,
+.ast-primary-header-bar {
+    background: #07111f !important;
+}
+
+.main-header-bar {
+    border-bottom: 1px solid rgba(255,255,255,.08) !important;
+}
+
+.ast-builder-menu-1 .menu-item > .menu-link,
+.site-title a,
+.site-title a:focus,
+.site-title a:hover {
+    color: #f7fbff !important;
+}
+
+.ast-builder-menu-1 .menu-item > .menu-link:hover,
+.ast-builder-menu-1 .current-menu-item > .menu-link {
+    color: var(--netbona-accent) !important;
+}
+
+.site-footer {
+    background: #040b14 !important;
+    color: var(--netbona-text-muted);
+}
+
+@media (max-width: 1100px) {
+    .netbona-hero__grid,
+    .netbona-section__header,
+    .netbona-about__grid,
+    .netbona-foundation__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .netbona-hero__grid {
+        gap: 34px;
+    }
+
+    .netbona-hero__visual {
+        min-height: 420px;
+    }
+
+    .netbona-section__header,
+    .netbona-about__grid,
+    .netbona-foundation__grid {
+        gap: 38px;
+    }
+
+    .netbona-about__copy {
+        position: static;
+    }
+}
+
+@media (max-width: 820px) {
+    .netbona-container {
+        width: min(calc(100% - 32px), var(--netbona-container));
+    }
+
     .netbona-hero {
-        padding: 90px 0 80px;
+        padding: 82px 0 68px;
+    }
+
+    .netbona-hero h1 {
+        font-size: clamp(50px, 12vw, 72px);
+    }
+
+    .netbona-hero__lead {
+        font-size: 18px;
+    }
+
+    .netbona-section {
+        padding: 88px 0;
     }
 
     .netbona-app-grid {
         grid-template-columns: 1fr;
     }
+
+    .netbona-principles article {
+        grid-template-columns: 40px 1fr;
+    }
+
+    .netbona-principles article p {
+        grid-column: 2;
+    }
+
+    .netbona-contact__inner,
+    .netbona-strip__inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 600px) {
     .netbona-container {
-        width: min(calc(100% - 28px), var(--netbona-container));
+        width: min(calc(100% - 24px), var(--netbona-container));
     }
 
     .netbona-hero {
-        padding: 72px 0 64px;
+        padding: 64px 0 54px;
     }
 
-    .netbona-hero p {
-        font-size: 18px;
+    .netbona-hero h1 {
+        font-size: 48px;
     }
 
-    .netbona-apps,
-    .netbona-about,
-    .netbona-contact {
+    .netbona-hero__actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .netbona-button {
+        width: 100%;
+    }
+
+    .netbona-hero__visual {
+        min-height: 340px;
+    }
+
+    .netbona-product-window {
+        width: 100%;
+        transform: none;
+    }
+
+    .netbona-orbit--one {
+        width: 300px;
+        height: 300px;
+    }
+
+    .netbona-orbit--two {
+        width: 380px;
+        height: 380px;
+    }
+
+    .netbona-product-window__body {
+        grid-template-columns: 1fr;
+    }
+
+    .netbona-product-stat--wide,
+    .netbona-product-chart {
+        grid-column: auto;
+    }
+
+    .netbona-section {
         padding: 72px 0;
     }
 
+    .netbona-section__header h2,
+    .netbona-about h2,
+    .netbona-foundation h2,
+    .netbona-contact h2 {
+        font-size: 42px;
+    }
+
     .netbona-app-card {
-        padding: 22px;
+        min-height: auto;
+        padding: 24px;
+    }
+
+    .netbona-app-card__body {
+        padding-top: 48px;
+    }
+
+    .netbona-foundation__card {
+        padding: 28px 22px;
+    }
+
+    .netbona-contact {
+        padding: 72px 0;
     }
 }
